@@ -1,9 +1,12 @@
 # 7158_G5
-Josue Villaicencio Confirma
+
 #include <stdio.h>
 int main()
 {
-printf ("Hola mundo :D"); //Cesar Loor
+printf ("Hola mundo :D");
 
 return 0;
 }
+
+// Cesar Loor
+//Josue Villaicencio Confirma
