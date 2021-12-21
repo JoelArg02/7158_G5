@@ -4,5 +4,5 @@ int main()
 {
 printf ("Hola mundo :D"); //Cesar Loor
 
-retun 0;
+return 0;
 }
