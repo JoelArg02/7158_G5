@@ -1,0 +1,113 @@
+Algoritmo  DDEDPS
+	Definir usuario, contrasenia Como Caracter	
+	Definir Digita Como Caracter
+	Escribir "Hola bienvenido!"
+	Escribir "Dame un usuario"
+	Leer usuario 
+	Escribir "Dame la contraseña"
+	Leer contrasenia
+	//Usuarios
+	si usuario == "Alan"  y contrasenia == "alan123" o usuario == "Joel" y contrasenia == "joel123" Entonces
+		Escribir "Haz logeado correctamente" 
+		Escribir "Espera mientras se carga el sistema....."
+		Escribir ".."
+		Esperar 3 Segundos
+		Escribir 'Pulsa una tecla para continuar...';
+		Esperar Tecla;
+		Borrar Pantalla;
+		Escribir "Bienvenido Dr.", usuario
+		Escribir "Bienvenido a DDEDPS (Detector de estado de depresion somatizada)"
+		Escribir "---------------Menu------------"
+		Escribir "Opciones: "
+		Escribir "1.Para realizar una consulta de tu usuarior"
+		Escribir "2.Hacer un examen de DDEDPS"
+		Leer op1
+		Segun op1 Hacer
+			1:
+				Escribir "Cedula:"
+				Escribir "Correo:" 
+				Escribir "Numero de usos del programa:"
+				Escribir "Último uso realizado el dia:"
+				Escribir "Aplasta enter para continuar"
+				Esperar Tecla
+			2:
+				Escribir "Para seguir con el proceso recuerda que los datos a continuacion no son exactos"
+				Escribir "Si continuas sera bajo la responsabilidad de la persona acargo"
+				Escribir "Aceptas los terminos de uso y aceptas que cualquier mal manejo sera culpa de la persona acargo"
+				Escribir "Digita si o no"
+				Leer Digita
+				Si Digita == "Si" o Digita =="si" entonces 
+					Escribir "Para poder realizar el examen digita la ubicacion del fichero .txt"
+					Escribir "Ubucacion ejemplo C:\Users\Joel\Documents\ESPE\nombredelarchivo.txt"
+					Escribir "Solo valido para documentos de texto .txt"
+					Escribir "Leyendo archivo..."
+					Esperar 5 Segundos
+					Escribir "Los resultados del analisis son los siguientes:"
+					Escribir "Los resultados seran indicados en la version de prueba en C"
+					Escribir "Digita enter para salir"
+					Esperar Tecla
+				Sino 
+					Escribir "Operacion cancelada"
+					Escribir "Digita enter para salir"
+					Esperar tecla
+				FinSi
+		FinSegun
+		
+	SiNo
+		Escribir "Datos incorrectos consulta al administrador"
+		Escribir "Digita enter para salir"
+		Esperar tecla
+	FinSi
+	si usuario == "root" y contrasenia == "root" Entonces
+		Escribir "Haz logeado correctamente" 
+		Escribir "Espera mientras se carga el sistema....."
+		Escribir ".."
+		Esperar 3 Segundos
+		Escribir 'Pulsa una tecla para continuar...';
+		Esperar Tecla;
+		Borrar Pantalla;
+		Escribir "Bienvenido administrador"
+		Escribir "Bienvenido a DDEDPS (Detector de estado de depresion somatizada)"
+		Escribir "Que deseas hacer hoy?"
+		Escribir "1. Agregar usuario"
+		Escribir "2. Borrar usuario"
+		Escribir "3. Revisar usuario o contraseña"
+		Leer op2
+		Segun op2 Hacer
+			1:
+				Escribir "Para agregar un usuario digita la cedula, usuario, contraseña, correo y fecha de registro, mas el nombre de la persona a cargo del registro"
+				Escribir "Cedula"
+				Escribir "Usuario"
+				Escribir "Contraseña"
+				Escribir "Correo"
+				Escribir "Fecha registro ejm 01/01/2000"
+				Escribir "Persona a cargo"
+				Escribir "Presiona enter para continuar"
+				Esperar Tecla
+				Limpiar Pantalla
+			2:
+				Escribir "Para borrar el usuario digita los siguientes datos:"
+				Escribir "Cedula"
+				Escribir "Usuario"
+				Escribir "Contrase;a"
+				Escribir "Digita borrar usuario para confirmar y continuar"
+				Leer Digita
+				Si Digita == "Borrar usuario" entonces 
+					Escribir "Usuario eliminado correctamente"
+					Escribir "Digita enter para borrar salir"
+					Esperar Tecla
+				Sino 
+					Escribir "Operacion cancelada"
+				FinSi
+			3:
+				Escribir "Para revisar usuario o contraseña digita la cedula del dr"
+				Escribir "Cedula:"
+				Escribir "El usuario y contrase;a son: prueba, prueba, correo, fecha registro, numero de usos de la app"
+				Escribir "Aplasta enter para salir"
+				Esperar 10 Segundos
+				Limpiar Pantalla
+		FinSegun
+	SiNo
+		Borrar pantalla
+	FinSi
+FinAlgoritmo
