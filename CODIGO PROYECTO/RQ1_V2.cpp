@@ -24,7 +24,7 @@ char contrase[25];
 int opc = 0;
 
 
-lg = fopen("C:/Users/Joel/Desktop/Proyect/1/progrm/archi2.txt", "r");
+lg = fopen("C:/Users/Joel/Desktop/Proyect/1/progrm/psicologico.txt", "r");
 if(lg==NULL)
 {
 printf("Error interno avisar al administrador...\n");
@@ -61,12 +61,12 @@ if(fp==NULL)
  }
 if  (strcmp(contrase,buffer) == 0)
 {
-	puts("Contraseña correcta");
+	puts("ContraseÃ±a correcta");
 	goto loginexitoso;
 }
 else
 {
-	printf("Contraseña incorrecta\n");
+	printf("ContraseÃ±a incorrecta\n");
 	printf("Vuelva a intentarlo");
 	getch();
 	system("cls");
