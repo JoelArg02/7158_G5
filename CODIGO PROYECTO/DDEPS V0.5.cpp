@@ -4,8 +4,10 @@
 #include <string.h>
 #include <windows.h>
 
+
 int main(){
-	
+
+FILE *lg;
 FILE *fp;
 char ci[10];
 char cir[10];
@@ -13,10 +15,28 @@ char clave[50];
 char newpas[90];
 char registros[99999];
 char nombrepaciente[30];
+char cartadir[300];
 char buffer[10];
+char cadena[50], cadena2[50], cadena3[50], cadena4[50], cadena6[50];
+char cadena7[50],cadena8[50], cadena9[50],cadena10[50], cadena5[50];
+char test1[50];
 char contrase[25];
 int opc = 0;
 
+
+lg = fopen("C:/Users/Joel/Desktop/Proyect/1/progrm/psicologico.txt", "r");
+if(lg==NULL)
+{
+printf("Error interno avisar al administrador...\n");
+printf("El programa se cerrara......\n");
+getch();
+exit(1);
+}
+else
+{
+ fgets(test1, 50,lg);
+ fclose(lg);
+}
 printf("\n\n\t\t\t\t       Bienvenido a DDEDPS\n");
 printf("\n\n\t\t\t\t\t     INGRESO");
 printf("\n     ======================================================================================\n");
@@ -234,9 +254,57 @@ vdduu: {
 	fclose(fp);
 	goto menu;}
 }
+joelxd: {
+	fflush(stdin);
+	printf("\nIngrese la ubicacion del documento a leer: ");
+	gets(cartadir);
+	fp = fopen  (cartadir, "r");
+	if(fp==NULL)
+	{
+	printf("Error, no se encontro ningun archivo.\n");
+	printf("Reingrese la ruta del archivo: ");
+	getch();
+	goto examen;
+	fclose(fp);}
+	else 
+	{
+	printf("Analizando......\n");
+	fgets(cadena, 50,fp);
+	fgets(cadena2, 50,fp);
+	fgets(cadena3, 50,fp);
+	fgets(cadena4, 50,fp);
+	fgets(cadena5, 50,fp);
+	fgets(cadena6, 60,fp);
+	fgets(cadena7, 70,fp);
+	fgets(cadena8, 80,fp);
+	fgets(cadena9, 90,fp);
+	fgets(cadena10, 100,fp);
+	fp = fopen("C:/Users/Joel/Desktop/Proyect/1/progrm/archi2.txt", "r");
+	if(fp==NULL)
+	{
+	printf("Error interno avisar al administrador...\n");
+	printf("El programa se cerrara......\n");
+	getch();
+	exit(1);
+	}
+	else{
+	puts(cadena);
+	puts(test1);
+	fclose(fp);
+	getch();
+	goto examen;
+	
+	}
+}
 exml: {
+	fflush(stdin);
 	printf("Nombre del paciente: ");
 	gets(nombrepaciente);
-	return 0;
+	fp = fopen (nombrepaciente, "w+");
+	fclose(fp);
+	printf("Paciente creado exitosamente..");
+	goto joelxd;
+	}
 }
+
 }
