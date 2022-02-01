@@ -4,7 +4,6 @@
 #include <string.h>
 #include <windows.h>
 
-
 int main(){
 	
 FILE *fp;
@@ -17,7 +16,6 @@ char nombrepaciente[30];
 char buffer[10];
 char contrase[25];
 int opc = 0;
-
 
 printf("\n\n\t\t\t\t       Bienvenido a DDEDPS\n");
 printf("\n\n\t\t\t\t\t     INGRESO");
@@ -43,12 +41,12 @@ if(fp==NULL)
  }
 if  (strcmp(contrase,buffer) == 0)
 {
-	puts("Contraseña correcta");
+	puts("ContraseÃ±a correcta");
 	goto loginexitoso;
 }
 else
 {
-	printf("Contraseña incorrecta\n");
+	printf("ContraseÃ±a incorrecta\n");
 	printf("Vuelva a intentarlo");
 	getch();
 	system("cls");
