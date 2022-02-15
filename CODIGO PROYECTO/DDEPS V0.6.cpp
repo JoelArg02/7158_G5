@@ -113,7 +113,7 @@ FILE *fp;
 	printf("[4]Volver al menu inicial\n");
 	printf("[5]Salir\n");
 	printf("\nDigite la opcion a escoger: ");
-	scanf("%d", &opc); 
+	scanf("%d", &opc);      //Recomendación: Advertir al usuario mediante un mensaje el ingreso de caracteres o numeros erroneos
 		switch(opc){      //Recomendacion: En caso de que exista una digitacion de caracter o numero erroneo que el sistema vuelva sobre el mismo menu.
 			case 1:
 				system("cls");
