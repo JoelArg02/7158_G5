@@ -78,7 +78,7 @@ if(fp==NULL)
  	fgets(buffer,10,fp);
  	printf("Digite su clave para continuar: "PS);
  	gets(contrase);
- 	printf("a"ANSI_COLOR_RESET); 
+ 	printf("a"ANSI_COLOR_RESET); //Recomendacion: Modificar para que se vea que se esta escribiendo algo y no se quede en negro el espacio
  	fclose(fp);	
  }
 if  (strcmp(contrase,buffer) == 0)
@@ -113,7 +113,7 @@ FILE *fp;
 	printf("[4]Volver al menu inicial\n");
 	printf("[5]Salir\n");
 	printf("\nDigite la opcion a escoger: ");
-	scanf("%d", &opc); //Recomendación: Advertir al usuario mediante un mensaje el ingreso de caracteres o numeros erroneos
+	scanf("%d", &opc); 
 		switch(opc){      //Recomendacion: En caso de que exista una digitacion de caracter o numero erroneo que el sistema vuelva sobre el mismo menu.
 			case 1:
 				system("cls");
