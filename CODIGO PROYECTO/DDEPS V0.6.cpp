@@ -226,7 +226,8 @@ void exm(void)
   	printf("\t\t\t##"ANSI_COLOR_RESET"                                                                      "CI"##\n");
   	printf("\t\t\t==========================================================================\n"ANSI_COLOR_RESET);
 	printf("\t\t\tDigite opcion a escoger: ");
-
+        scanf("%d",&opc);   //Realizar el control de ingreso de un numero diferente y de caracteres - sigue presente el error
+	switch(opc){        //Recomendacion: Añadir mensaje de ingreso de datos erroneos o ingreso de caracteres
 	case 1: 
  		system("cls");
  		printf("Aun no en funcionamiento..");
