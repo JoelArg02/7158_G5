@@ -78,7 +78,7 @@ if(fp==NULL)
  	fgets(buffer,10,fp);
  	printf("Digite su clave para continuar: "PS);
  	gets(contrase);
- 	printf("a"ANSI_COLOR_RESET); //Modificar para que se vea que se esta escribiendo algo y no se quede en negro el espacio
+ 	printf("a"ANSI_COLOR_RESET); //Recomendacion: Modificar para que se vea que se esta escribiendo algo y no se quede en negro el espacio
  	fclose(fp);	
  }
 if  (strcmp(contrase,buffer) == 0)
@@ -113,8 +113,8 @@ FILE *fp;
 	printf("[4]Volver al menu inicial\n");
 	printf("[5]Salir\n");
 	printf("\nDigite la opcion a escoger: ");
-	scanf("%d", &opc);
-		switch(opc){
+	scanf("%d", &opc); //Recomendación: Advertir al usuario mediante un mensaje el ingreso de caracteres o numeros erroneos
+		switch(opc){      //Recomendacion: En caso de que exista una digitacion de caracter o numero erroneo que el sistema vuelva sobre el mismo menu.
 			case 1:
 				system("cls");
 				ruser();
@@ -174,8 +174,8 @@ void ruser(void)
 }
 }
 
-void registr(void) //Añadir una opcion de salida al menu en caso de que no se tenga el nombre del paciente
-{                  //Añadir controles de opcion en el menu a crear 
+void registr(void) //Recomendacion: Añadir una opcion de salida al menu en caso de que no se tenga el nombre del paciente
+{                  //Recomendacion: Añadir controles de numeros diferentes y caracteres en el menu a crear 
 FILE *fp;
 char cir[10];
 char registros[99999];
@@ -226,8 +226,8 @@ void exm(void)
   	printf("\t\t\t##"ANSI_COLOR_RESET"                                                                      "CI"##\n");
   	printf("\t\t\t==========================================================================\n"ANSI_COLOR_RESET);
 	printf("\t\t\tDigite opcion a escoger: ");
-	scanf("%d",&opc);   //control de ingreso de un numero diferente y de caracteres - sigue presente el error
-	switch(opc){        //Añadir mensaje de ingreso de datos erroneos o ingreso de caracteres
+	scanf("%d",&opc);   //Realizar el control de ingreso de un numero diferente y de caracteres - sigue presente el error
+	switch(opc){        //Recomendacion: Añadir mensaje de ingreso de datos erroneos o ingreso de caracteres
 	case 1: 
  		system("cls");
  		printf("Aun no en funcionamiento..");
@@ -364,8 +364,8 @@ do
   printf(CI"\t\t\t==========================================================================\n"ANSI_COLOR_RESET);
  		printf("\nDigite opci%cn a escoger: ", 162);
  		fflush( stdin );
- 		scanf("%c",&opcc);     //Añadir mensaje de datos ingresados son erroneos 
-	 switch(opcc){                 //Añadir mensaje de ingreso de dato de caracter
+ 		scanf("%c",&opcc);     //Recomendacion: Añadir mensaje de datos ingresados son erroneos 
+	 switch(opcc){                 //Recomendacion: Añadir mensaje de ingreso de dato de caracter
  		case '1' : 
  			system("cls");
  			registr();
