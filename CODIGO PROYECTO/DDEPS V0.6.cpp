@@ -364,8 +364,7 @@ do
   printf(CI"\t\t\t==========================================================================\n"ANSI_COLOR_RESET);
  		printf("\nDigite opci%cn a escoger: ", 162);
  		fflush( stdin );
- 		scanf("%c",&opcc);     //Recomendacion: Añadir mensaje de datos ingresados son erroneos 
-	 switch(opcc){                 //Recomendacion: Añadir mensaje de ingreso de dato de caracter
+ 	
  		case '1' : 
  			system("cls");
  			registr();
