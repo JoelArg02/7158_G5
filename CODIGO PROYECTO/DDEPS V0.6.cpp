@@ -78,7 +78,7 @@ if(fp==NULL)
  	fgets(buffer,10,fp);
  	printf("Digite su clave para continuar: "PS);
  	gets(contrase);
- 	printf("a"ANSI_COLOR_RESET); //Recomendacion: Modificar para que se vea que se esta escribiendo algo y no se quede en negro el espacio
+ 	printf("a"ANSI_COLOR_RESET); 
  	fclose(fp);	
  }
 if  (strcmp(contrase,buffer) == 0)
